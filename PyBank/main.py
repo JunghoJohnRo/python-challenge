@@ -49,12 +49,12 @@ with open(budgetCSV, 'r') as csvfile:
 
 # Print Final Results in Terminal
 print("Financial Analysis")
-print("----------------------------------")
+print("---------------------------")
 print(f"Total Months: {str(totalMonth)}")
 print(f"Total: ${str(totalRevenue)}")
 print(f"Average Change: ${str(round(averagechange, 2))}")
-print(f"Greatest Increase in Profits: {greMonth} $({str(greatestRev)})")
-print(f"Greatest Decrease in Proftis: {lowMonth} $({str(lowestRev)})")
+print(f"Greatest Increase in Profits: {greMonth} (${str(greatestRev)})")
+print(f"Greatest Decrease in Proftis: {lowMonth} (${str(lowestRev)})")
 
 # Specify where to export Text File to
 export_file = os.path.expanduser('~/Desktop/Homework 3/python-challenge/PyBank/Final.txt')
@@ -62,9 +62,9 @@ export_file = os.path.expanduser('~/Desktop/Homework 3/python-challenge/PyBank/F
 # Open the file and write what to print in Text File (Googled "\n" so it prints in the next line)
 with open(export_file, 'w') as file:
     file.write("Financial Analysis\n")
-    file.write("----------------------------------\n")
+    file.write("---------------------------\n")
     file.write(f"Total Months: {str(totalMonth)}\n")
     file.write(f"Total: ${str(totalRevenue)}\n")
     file.write(f"Average Change: ${str(round(averagechange, 2))}\n")
-    file.write(f"Greatest Increase in Profits: {greMonth} $({str(greatestRev)})\n")
-    file.write(f"Greatest Decrease in Proftis: {lowMonth} $({str(lowestRev)})\n")
+    file.write(f"Greatest Increase in Profits: {greMonth} (${str(greatestRev)})\n")
+    file.write(f"Greatest Decrease in Proftis: {lowMonth} (${str(lowestRev)})\n")
