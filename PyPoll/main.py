@@ -33,7 +33,7 @@ with open(electionCSV, 'r') as csvfile:
         elif row[2] == "O'Tooley":
             otooleyVote += 1
    
-    # Calculate Percentage of Votes for each Candidate
+    # Calculate Percentage of Votes for each Candidate (Note: Did not multiply by 100 for formatting)
     khanPercent = (khanVote / totalVotes)
     correyPercent = (correyVote / totalVotes)
     liPercent = (liVote / totalVotes)
