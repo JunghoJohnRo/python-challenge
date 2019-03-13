@@ -34,10 +34,10 @@ with open(electionCSV, 'r') as csvfile:
             otooleyVote += 1
    
     # Calculate Percentage of Votes for each Candidate
-    khanPercent = (khanVote / totalVotes) * 100
-    correyPercent = (correyVote / totalVotes) * 100
-    liPercent = (liVote / totalVotes) * 100
-    otooleyPercent = (otooleyVote / totalVotes) * 100
+    khanPercent = (khanVote / totalVotes)
+    correyPercent = (correyVote / totalVotes)
+    liPercent = (liVote / totalVotes)
+    otooleyPercent = (otooleyVote / totalVotes)
 
     # Creating Dictionary and finding Winner of election (Googled for max function and key=__.get to find value)
     candidates = ["Khan", "Correy", "Li", "O'Tooley"]
@@ -50,10 +50,11 @@ print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {str(totalVotes)}")
 print("-------------------------")
-print(f"Khan: {str(round(khanPercent, 3))}% ({str(khanVote)})")
-print(f"Correy: {str(round(correyPercent, 3))}% ({str(correyVote)})")
-print(f"Li: {str(round(liPercent, 3))}% ({str(liVote)})")
-print(f"O'Tooley: {str(round(otooleyPercent, 3))}% ({str(otooleyVote)})")
+# Googled how to format so the percentages show 3 decimal points
+print(f"Khan: {'{:.3%}'.format(khanPercent)} ({str(khanVote)})")
+print(f"Correy: {'{:.3%}'.format(correyPercent)} ({str(correyVote)})")
+print(f"Li: {'{:.3%}'.format(liPercent)} ({str(liVote)})")
+print(f"O'Tooley: {'{:.3%}'.format(otooleyPercent)} ({str(otooleyVote)})")
 print("-------------------------")
 print(f"Winner: {str(winner)}")
 print("-------------------------")
@@ -67,10 +68,10 @@ with open(export_file, 'w') as file:
     file.write("-------------------------\n")
     file.write(f"Total Votes: {str(totalVotes)}\n")
     file.write("-------------------------\n")
-    file.write(f"Khan: {str(round(khanPercent, 3))}% ({str(khanVote)})\n")
-    file.write(f"Correy: {str(round(correyPercent, 3))}% ({str(correyVote)})\n")
-    file.write(f"Li: {str(round(liPercent, 3))}% ({str(liVote)})\n")
-    file.write(f"O'Tooley: {str(round(otooleyPercent, 3))}% ({str(otooleyVote)})\n")
+    file.write(f"Khan: {'{:.3%}'.format(khanPercent)} ({str(khanVote)})\n")
+    file.write(f"Correy: {'{:.3%}'.format(correyPercent)} ({str(correyVote)})\n")
+    file.write(f"Li: {'{:.3%}'.format(liPercent)} ({str(liVote)})\n")
+    file.write(f"O'Tooley: {'{:.3%}'.format(otooleyPercent)} ({str(otooleyVote)})\n")
     file.write("-------------------------\n")
     file.write(f"Winner: {str(winner)}\n")
     file.write("-------------------------\n")
