@@ -1,3 +1,5 @@
+# Jungho JohnRo Homework 3 Python Challenge
+
 import os
 import csv
 
@@ -64,6 +66,7 @@ export_file = os.path.expanduser('~/Desktop/Homework 3/python-challenge/PyPoll/F
 
 # Open the file and write what to print in Text File (Once agained use "\n" so it prints in the next line)
 with open(export_file, 'w') as file:
+    file.write("Jungho John Ro PyPoll Text File\n")
     file.write("Election Results\n")
     file.write("-------------------------\n")
     file.write(f"Total Votes: {str(totalVotes)}\n")
